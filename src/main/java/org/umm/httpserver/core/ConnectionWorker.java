@@ -24,6 +24,12 @@ public class ConnectionWorker extends Thread {
             inputStream = socket.getInputStream();
             outputStream = socket.getOutputStream();
 
+            int _byte = inputStream.read();
+
+            while ( (_byte = inputStream.read()) >= 0 ) {
+                System.out.print((char)_byte);
+            }
+
             String html = "<html><head><title>Servidor HTTP</title></head><body><h1>Hola que tal</h1></body></html>";
 
             final String CRLF = "\r\n";

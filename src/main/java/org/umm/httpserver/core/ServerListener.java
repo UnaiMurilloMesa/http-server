@@ -36,8 +36,6 @@ public class ServerListener extends Thread{
                 worker.start();
             }
 
-            // serverSocket.close(); Que luego no se cierre
-
         } catch (IOException e) {
             e.printStackTrace();
             log.error("Problemas con el socket: " + e.getMessage());
